@@ -1,0 +1,40 @@
+for this applying theme 
+we will be using 3 functions
+
+1. to apply the theme only under this 
+    . we will remove if any existing theme
+    . add the theme which we get from the function parameter as argument.
+
+2. next function will be to get the system theme under this
+    . this function will return - window.matchMedia("(prefers-color-scheme: dark)").matches
+    this will give us the system theme
+    we will be using if else or ternery operators if this matches then dark else light.
+
+3. another function is to set Initial theme of what is stored in the localStorage so
+    . we will be getting localStorage.getItem("theme"); and store the value in a variable 
+    . then we will call the (1st funciton) apply theme - and give it a parameter of the local storage saved theme OR what we get from (2nd function) getSystemTheme;
+
+after declaring all the function now calling 
+the setInitial theme function(); 
+
+now we are writing code for change theme on system theme change.
+
+window.matchMedia("(prefers-color-scheme: dark)") - adding eventListener to this with the event of "change" and in the function we will check if there is any theme in the local storage saved if there is no such property (we can say key value item) then we call (1st fuction) applytheme to apply the theme we get from (2nd function) getSystemtheme()
+
+
+now we have to write code for the button to change the theme on button toggle.
+
+we will select the button by queryselector and add a event listener on click event and in the function field 
+
+    we will create a variable current theme and check if in out body is there any classlist containing "dark" class 
+    if yes then saving "dark" in the variable else "light"
+
+    now we will create another variable newTheme and here we will check if current Theme === 'dark' then change it to light and if its light change it to dark 
+    like toggel effect 
+
+    then we will call out 1st function apply theme and give it a argument as newTheme which we get after toggling.
+    and then 
+
+    store the theme and its value i.e newTheme in the localStorage.setIntem which will update the theme if already exist else it will create and add a new item.
+
+and we are done!

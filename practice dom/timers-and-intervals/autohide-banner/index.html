@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto hide alert</title>
+    <style>
+        div {
+            height: 100px;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.168);
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 2px rgb(154, 154, 154);
+        }
+
+        .hide-banner {
+            display: none;
+        }
+
+        .alert-banner {
+            /* display: none; */
+            opacity: 1;
+            transition: opacity .5 ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert-banner">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, vitae!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #main {
+            display: block;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            width: 100%;
+            height: 100%;
+            background-color: azure;
+            cursor: pointer;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            width: 20%;
+            margin: 20px;
+        }
+
+        input {
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+
+        }
+
+        input[type="submit"] {
+            background: red;
+        }
+
+        .card {
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            margin: 20px;
+            background-color: rgb(152, 152, 155);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* border: 2px solid rgb(159, 159, 159); */
+            box-shadow: 2px 3px 10px grey;
+            border-radius: 5px;
+        }
+
+        .pic {
+            border-radius: 50%;
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            overflow: hidden;
+        }
+
+        .pic img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <form action="">
+            <input type="text" placeholder="image link" name="" id="">
+            <input type="text" placeholder="name" name="" id="">
+            <input type="text" placeholder="occupation" name="" id="">
+            <input type="text" placeholder="info" name="" id="">
+            <input type="submit">
+        </form>
+
+        <!-- <div class="card">
+            <div class="pic"><img
+                    src="https://images.unsplash.com/photo-1757137910091-1cf071030691?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""></div>
+            <div class="head">
+                <h3>HArsh Sharma</h3>
+                <h5>adfjdksaf</h5>
+
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime adipisci doloribus odio alias ullam,
+                dolor voluptatum quisquam quaerat, accusantium quas natus!</p>
+
+        </div> -->
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

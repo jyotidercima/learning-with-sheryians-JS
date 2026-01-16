@@ -1,0 +1,12 @@
+steps followed in js
+
+1. declare variables and store a reference of email, password and form from the html structure.
+2. add a event listener on form submit and call function which we will be creating next.
+3. add preventDefault() for the event so that on form submit it don't refresh and reset the form.
+4. writing emailError and passwordError .textContent = "" so that initially the error text is empty.
+5. create Regex (regular expression) for email and password 
+6. create email and password answer variable and give them value of email.Regex.test(email.value) same with pw. which will be testing the value entered in the email and password field.
+7. create a variable isValid = True for result message.
+8. write if statement for emailans if its false then add the textcontent of "invalid Email" in the emailError element in the html structure and also update its style.display to initial as in css its display none. do same with passwordans also.
+also as there is some fault in the value entered in both the if statement add isValid = false so that the value of isValid updated to something is wrong.
+9. write if statement for isValid and inside it use queryselector method to select resultmessage element and give is textContent as "Form ready to submit" and in the else block "something wrong" 

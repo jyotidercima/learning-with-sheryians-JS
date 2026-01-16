@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #abcd {
+            position: absolute;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) .2s;
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+        }
+
+        .back-change {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="abcd">
+        <li>Apple</li>
+        <li>mango</li>
+        <li>orange</li>
+        <li>pinapple</li>
+        <li>grapes</li>
+    </ul>
+    <script src="index.js"></script>
+</body>
+
+</html>
