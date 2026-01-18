@@ -1,0 +1,49 @@
+In this project we are making a text input under which when user enter the name of the user the user cards will filter out the users from the array of users.
+
+To begin 
+what we want - show users, 
+                filter by user input    
+                show filtered users
+            
+
+firstly we will create a variable storing array of objects containing the user details like name pic url and bio 
+
+then we will create a function to showuser which will take an array as an argument
+
+    under this fuction we will iterate every object containing user info 
+        and write a function with a parameter of user
+            now we will create a card variable under which we will be dynamicaly creating card Element 
+
+            it is something like
+
+            div.card
+                img src=" the value of pic from the users array class= bg-img
+
+                div.blurred-layer and set background img as user pic from the array
+
+                then will create a div.contains which will he contining h3 and para
+
+                h3 and p will be given text from the array h3 for name and p for bio of the user.
+
+            by writing this now we have seperate cards for each user now.
+
+        after this we will add each element inside its main content the append that at its specific place after all the main card is appended to the cards div element in the html
+
+now we will call this function() and we have all the cards created for each user
+
+
+
+now the logic 
+
+declare a variable and selecct the element input filtered
+
+add eventlistener to this input and in the function part 
+    
+    create a new variable and under this filter the user where the input text is matching with the user name 
+
+now we will select the cards div and give it inner html space value 
+
+now we will call our function and pass the parameter we created above which store the filtered users. 
+
+also we had a home work to work on no user found when there is no such user.
+which i will be creating when i am done with above program
