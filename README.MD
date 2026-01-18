@@ -3,7 +3,7 @@
 
 # 🔹 Mini Project – [Project Name]
 
-This is a mini project created while learning from **Sheriyans Coding School**.  
+These are mini projects created while learning from **Sheriyans Coding School**.  
 The purpose of this projects is to practice and understand core concepts of **JavaScript** by building something practical.
 
 <!-- --- -->
