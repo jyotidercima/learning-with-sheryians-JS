@@ -6,7 +6,7 @@
 This is a mini project created while learning from **Sheriyans Coding School**.  
 The purpose of this projects is to practice and understand core concepts of **JavaScript** by building something practical.
 
----
+<!-- --- -->
 <!-- 
 ## 🚀 Live Demo
 👉 [Live Project Link](#)  
@@ -21,12 +21,12 @@ The purpose of this projects is to practice and understand core concepts of **Ja
 
 ---
 
-## ✨ Features
+<!-- ## ✨ Features
 - [Feature 1 – e.g. Search users dynamically]
 - [Feature 2 – e.g. Real-time filtering]
-- [Feature 3 – e.g. Responsive UI]
+- [Feature 3 – e.g. Responsive UI] -->
 
----
+<!-- --- -->
 
 ## 📚 What I Learned
 - DOM manipulation using JavaScript
