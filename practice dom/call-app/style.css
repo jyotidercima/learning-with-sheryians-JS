@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* background: linear-gradient(pink, lightblue, rgb(148, 148, 255)) no-repeat; */
+    height: 100vh;
+    background: peachpuff;
+}
+
+/* Form */
+
+.form-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    background: linear-gradient(rgb(255, 255, 255), rgb(120, 201, 227), rgb(101, 101, 244)) no-repeat;
+    padding: 24px;
+    border-radius: 22px;
+    width: 30rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+label[for] {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid #c0c0c0;
+    font-size: 14px;
+    background: rgb(173, 193, 203);
+    box-shadow: 0 1px 5px grey;
+
+    /* margin-top: 6px; */
+}
+
+.submit-btn {
+    margin-top: 10px;
+    background: #1a1a1a;
+    color: white;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #000;
+}
+
+.closeForm {
+    width: 100%;
+    padding: 12px 22px;
+    margin-top: 10px;
+    background-color: #ff4a4a;
+    border: none;
+    color: #ffe1e1;
+    font-weight: 600;
+    border-radius: 100px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+span {
+    display: inline;
+}
+
+
+/* Note container */
+
+
+.note-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.left-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-icons button {
+    height: 40px;
+    width: 40px;
+    background-color: #33333334;
+    border-radius: 50%;
+
+}
+
+.stack {
+    height: 250px;
+    width: 300px;
+    border: 2px solid rgba(255, 211, 211, 0.212);
+    border: 2px solid rgb(60, 42, 8);
+    /* box-shadow: 5px 7px 16px 1px rgb(255, 166, 87); */
+    position: relative;
+    border-radius: 15px;
+
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(86, 41, 41);
+    height: 100%;
+    padding: 20px;
+    background-color: #e2a5a5;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(60, 42, 8);
+
+
+
+}
+
+.card label {
+    color: rgb(94, 78, 78);
+    text-transform: none;
+
+}
+
+
+
+.hometown-info,
+.booking-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .card img {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    background: url("https://tse3.mm.bing.net/th/id/OIP.YK1pfhGN091NFPi49P0iJAAAAA?w=434&h=626&rs=1&pid=ImgDetMain&o=7&rm=3");
+    object-fit: contain;
+    overflow: hidden;
+
+} */
+
+.avatar {
+    background-image: url("https://img.freepik.com/premium-photo/sunset-casting-golden-glow-swiss-alps-blooming-meadows-landscape-wallpaper_1090394-6845.jpg");
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    background-size: 100%;
+    margin-bottom: 10px;
+
+}
+
+.card-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.card-btn button {
+    width: 100px;
+    background-color: rgb(92, 92, 237);
+    border-radius: 20px;
+    color: white;
+    padding: 3px;
+
+}
+
+.card:nth-child(1) {
+    z-index: 3;
+    opacity: 1;
+}
+
+.card:nth-child(2) {
+    z-index: 2;
+    transform: translateY(10px) scale(0.98);
+    opacity: 0.9;
+}
+
+.card:nth-child(3) {
+    z-index: 1;
+    transform: translateY(20px) scale(0.96);
+    opacity: 0.7;
+}
+
+
+
+/* right colors */
+
+.right-colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dot {
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 50%
+}
+
+.dot:nth-child(1) {
+    background: #000;
+}
+
+.dot:nth-child(2) {
+    background: purple;
+}
+
+.dot:nth-child(3) {
+    background: orange;
+}
+
+.dot:nth-child(4) {
+    background: teal;
+}

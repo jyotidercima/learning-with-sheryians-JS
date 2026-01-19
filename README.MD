@@ -1,7 +1,7 @@
 <!-- Sheryians Coding School - JavaScript course
  -->
 
-# 🔹 Mini Project – [Project Name]
+<!-- # 🔹 Mini Project – [Project Name] -->
 
 These are mini projects created while learning from **Sheriyans Coding School**.  
 The purpose of this projects is to practice and understand core concepts of **JavaScript** by building something practical.

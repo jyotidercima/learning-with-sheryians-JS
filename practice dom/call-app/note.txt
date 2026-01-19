@@ -1,0 +1,149 @@
+Lets understand this Call app
+
+basicaly in this app  we have 2 containers or main sections
+    .form-container
+        it contains form which take input from the user
+        inputs like
+            1. image url
+            2. fullname
+            3. hometown
+            4. purpose of Call
+            5. category     
+                emergency
+                important
+                urgent
+                no-rush
+            
+            then we have a submit button
+        and outside form tag we have a close btn which will close the form
+
+    .note-container
+        in this note container we have 3 sections 
+        .left nav icons
+            which contains 
+                .addnote - which will open the form 
+                .upbtn - to scroll up in the card
+                .downbtn - to scroll down in the card
+        .stack
+            this will be having out cards of recorded call list
+
+            under this the card will be added dynamicaly so will not write this cards in html but this is the structure used here
+                we have card div
+                    .under which we have avatar img which will be showing user image which we have asked in form img url
+                    .then we have name h2 
+                    .home town info div
+                        which contain a label and value span
+                    .bookings Info div
+                        which also contain label and value span
+                    .button div
+                        msg btn and call btn 
+                    
+                this card will be added to stack class element
+
+
+        .right-colors
+            and we have some color circles which is black, purple, orange, teal
+
+
+#####################################################################################
+
+now lets begin will JS part how and what we are doing
+
+    we will be selecting the elements
+
+1. we are working to open form on clicking add-note (+) btn in the note container in the note-container class
+
+    - we create a varible and store the selected add-note id element
+    - select the form-container div also
+    - we will add a eventlistener to add-note btn on click 
+        in the function we will give the form container display initial because in css we have already given it display none so on btn click form will open.
+    
+2. now we work on closing the form on clicking the close btn in the form container.
+     
+     - first we will select the close form btn and 
+     - add a eventlistener to the btn on click 
+     - and in the function we will give form-container to display none again to hide it.
+
+3. now we will work on form inputs and validations
+
+    - first selecting all input fields 
+    - add event listener to form on submit
+    - in function 
+        1. prevent the default behaviour of the form so that on submit it don't refresh
+        2. then we begin will adding validator so that fields are not empty
+
+4. we work on category radios 
+
+    - creating selected variable as false
+    - and then on category radios apply the foreach loop to triverse b/w each sub options
+    under the function take a paramenter category/cat
+        you can check using console.log or .dir the cat
+
+        if that cat is checked then select category value associated with that selected category
+
+        if not then alert the user to select category to proceed
+
+
+5. now we will work on saving the data into the local storage 
+
+    for this we will create a function to save to local storage which will take a "obj" 
+        - under this we will check if localStorage with the key task is null or not if it is 
+           . then we will create a empty array named as old tasks
+            and add the "obj" to the end of the array
+            .then we will add the tasks key to local storage with the value of old tasks but in stringified structure so it store it as a obj not as a stringified
+        - else 
+            .we will create a old task variable and give it the value of task key in the localStorage which already exist
+            . and store parsed value of that old task into old tasks variable
+            and add the obj to the oldtask array.
+            . then again we will set the task key with updated old tasks data in a stringified way.
+
+    then we will call the function with parameter of obj with imgurl, fullname, pourpose, hometown, selected
+    
+
+    - after submit we want to reset the form to empty 
+
+    - then will display none to form container
+
+    and call showcards function
+
+6. now we will write addCards function with the value of each card 
+    basicaly adding the cards dynamicaly in stack
+
+
+7. now we will work on the upbtn and down btn next to the card which will scroll to next card element
+
+    - we will add upbtn a eventlistener on click and 
+    - in the function we will 
+        create a variable lastchild which will be storing the lastelementchild of stack
+        -if lastchild is true
+            in stack we will use insertbefore with parameter of last child which need to added before the fist element child of stack
+            then we will class the update stack function.
+
+    -now we will add eventlistener to down btn on click 
+        in the function
+        we will create a variable first child giving it the value of first element child of stack
+        if firstChild is true 
+            we will append child the firstChild
+
+THIS IS A BIT CONFUSING SO WILL ASK GPT FOR EXPLAIN BETTER
+
+8. now we will write updatestack function
+
+        we will create a variable storing the selected card in the stack class
+         
+        here we will use foreach to go to each card and 
+        ok we didnot used foreach bcoz we did not wanted to do this for all cards but the top 3 cards so we will use for loop normal for loop
+
+
+
+            in the function taking the card and index as two parameters
+                we will give the z index to the card = 3 - index 
+                bcoz we are showing just 3  cards using css
+
+                next we will transform the card and translateY by index* 10 px and scale 1-index * 0.02
+
+                update card opacity = 1- index * 0.02
+
+
+THIS IS A BIT CONFUSING SO WILL ASK GPT FOR EXPLAIN BETTER
+ 

@@ -7,14 +7,22 @@ loginform.addEventListener('submit', (e) => {
 
     let emailError = document.querySelector('#emailError');
     let passwordError = document.querySelector('#passwordError');
-    emailError.style.textContent = "";
-    passwordError.style.textContent = "";
+    emailError.textContent = "";
+    passwordError.textContent = "";
 
-    const emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-    const passwordRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,20}$";
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,20}$/;
 
-    let emailans = /emailRegex/.test(email.value);
-    let passwordans = /passwordRegex/.test(password.value);
+    console.log(emailRegex)
+    console.log(typeof (emailRegex))
+    console.log(passwordRegex)
+
+
+    let emailans = emailRegex.test(email.value);
+    let passwordans = passwordRegex.test(password.value);
+
+    console.log(emailans);
+    console.log(typeof emailans);
 
     let resultMsg = true;
 
@@ -30,13 +38,13 @@ loginform.addEventListener('submit', (e) => {
     }
     let msg = document.querySelector("#resultMessage");
     msg.style.display = 'initial';
+    console.log("resultMsg: ", resultMsg)
     if (resultMsg) {
-        msg.textContent = " Everything allright"
+        msg.textContent = "Everything alright";
     } else {
         msg.textContent = "Something wrong";
-
     }
 
-})
+});
 
 
